@@ -1,0 +1,119 @@
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    background: url(./bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.container {
+    margin-top: 50px;
+    width: 85%;
+}
+
+h5{
+    color: #c1c1c1;
+    font-weight: bold;
+}
+.inputsection {
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+    /* border: 1px solid rgb(0, 0, 0); */
+    /* box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); */
+
+}
+
+.inputfield{
+    padding: 10px;
+    border: 1px solid #8e8e8e;
+    border-radius: 10px; 
+    width: 100%;
+    background-color: #fff;
+}
+
+#togglePassword {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button{
+    padding: 25px;
+    margin: 5px;
+}
+
+.btn{
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 80%;
+}
+.btn:hover{
+    background-color: #119cb7;
+}
+.btn:focus{
+    background-color: #119cb7;
+}
+
+.analysis {
+    text-align: center;
+    background: transparent;
+    padding: 10px;
+    border: 1px solid rgb(5, 67, 75);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.iconimage{
+    width: 30px;
+    height: 30px; 
+    margin-right: 10px;
+}
+
+.item{
+    background-color: rgb(199, 231, 246);
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.item p{
+    margin: 0;
+}
+
+.gact{
+    background-color: rgb(45, 210, 239);
+}
+
+
+#weakContainer, #mediumContainer, #strongContainer {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    text-align: center; /* Center text */
+}
+
+#weakText {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ff0000;
+}
+#mediumText {
+    margin-top: 8px; 
+    font-size: 14px; 
+    font-weight: bold;
+    color: #ff8c00; 
+}
+#strongText {
+    margin-top: 8px; 
+    font-size: 14px; 
+    font-weight: bold;
+    color: #1aff00; 
+}

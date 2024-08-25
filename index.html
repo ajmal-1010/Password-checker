@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Pass Checker</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="container inputsection">
+                <h5>Enter Your Password</h5>
+                <div class="inputfield" style="display: flex;">
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <button id="togglePassword" >
+                        <i  id="eyeIcon" class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                
+                <div class="button">
+                    <button id="checkbutton" class="btn" onclick="checkfunction()">Check</button>
+                </div>
+        </div>
+        <div class="container analysis">
+            <h5>Password Analysis</h5>
+                
+            <div class="">
+                <ul>
+                    <li class="item " id="uppercase">
+                        <img src="./svgs/Abig.png" alt="UpperCase" class="iconimage">
+                        <p>Uppercase</p>
+                    </li>
+                    <li class="item" id="lowercase">
+                        <img src="./svgs/a.png" alt="Lowercase" class="iconimage">
+                        <p>Lowercase</p>
+                    </li>
+                    <li class="item" id="numbers">
+                        <img src="./svgs/123.png" alt="Numbrers" class="iconimage">
+                        <p>Numbers</p>
+                    </li>
+                    <li class="item" id="symbols">
+                        <img src="./svgs/dollar.png" alt="Symbols" class="iconimage">
+                        <p>Symbols</p>
+                    </li>
+                </ul>
+                
+                <div id="weakContainer" style="display: none;">
+                    <img id="weakIcon" src="./svgs/weak.png" alt="Weak Icon" style="width: 40px; height: 40px;">
+                    <span id="weakText">Your Password is very weak!</span>
+                </div>
+                <div id="mediumContainer" style="display: none;">
+                    <img id="mediumIcon" src="./svgs/warning.png" alt="Medium Icon" style="width: 40px; height: 40px;">
+                    <span id="mediumText">Password is crackable</span>
+                </div>
+                <div id="strongContainer" style="display: none;">
+                    <img id="strongIcon" src="./svgs/strong.png" alt="Strong Icon" style="width: 40px; height: 40px;">
+                    <span id="strongText">Strong Password</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
