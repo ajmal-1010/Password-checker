@@ -99,11 +99,11 @@ function checkfunction() {
     strongContainer.style.display = 'none';
 
 
-    if (score<= 3) {
+    if (score<= 2) {
         weakContainer.style.display = 'flex';
-    } else if (score === 4 || score === 5) {
+    } else if (score === 3 || score === 4) {
         mediumContainer.style.display = 'flex'; 
-    } else if(score>=6){
+    } else if(score>=5){
         strongContainer.style.display = 'flex'; 
     }
 
