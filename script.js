@@ -6,25 +6,15 @@ function checkfunction() {
     let hasNumber = false;
     let hasSymbol = false;
 
-    // Regular expressions to check for letters, numbers, and symbols
-    const upperletters = /[A-Z]/;  // Matches any upper case letter
+    const upperletters = /[A-Z]/; 
     const lowerletters = /[a-z]/;
-    const numbers = /[0-9]/;     // Matches any digit
-    const symbols = /[!@#$%^&*(),.?":{}|<>]/;  // Matches any common symbol
+    const numbers = /[0-9]/;    
+    const symbols = /[!@#$%^&*(),.?":{}|<>]/;  
     const space = /\s/;
 
-    // Check for spaces first
     if (space.test(pwd)) {
-        // If spaces are not allowed, show an alert and stop further execution
-        // strengthIndicator.textContent = 'Password should not contain spaces';
-        // strengthIndicator.style.color = 'red';
-        // // Reset all icons
-        // weakIcon.style.display = 'none';
-        // mediumIcon.style.display = 'none';
-        // strongIcon.style.display = 'none';
         window.alert("Password contain spaces!");
-        return; // Stop further execution
-
+        return; 
     }
 
     let score=0;
@@ -88,12 +78,10 @@ function checkfunction() {
         document.getElementById("symbols").classList.remove("gact");
     }
 
-    // Containers for password strength
     let weakContainer = document.getElementById("weakContainer");
     let mediumContainer = document.getElementById("mediumContainer");
     let strongContainer = document.getElementById("strongContainer");
 
-    // Reset all containers
     weakContainer.style.display = 'none';
     mediumContainer.style.display = 'none';
     strongContainer.style.display = 'none';
@@ -109,14 +97,8 @@ function checkfunction() {
 
 }
 
-// Add an event listener to the input field
 document.getElementById("password").addEventListener("keydown", function(event) {
-    // Check if the pressed key is Enter
     if (event.key === "Enter") {
-        // Prevent the default action of Enter key (if necessary)
-        event.preventDefault();
-        
-        // Trigger the button click function
         document.getElementById("checkbutton").click();
     }
 });
@@ -127,7 +109,6 @@ const togglePasswordButton = document.getElementById("togglePassword");
 const eyeIcon = document.getElementById("eyeIcon");
 
 togglePasswordButton.addEventListener("click", function () {
-    // Toggle the type attribute of the password input
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
         eyeIcon.classList.remove("fa-eye");
